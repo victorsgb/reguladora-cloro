@@ -1,0 +1,108 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    font-size: 62.5%;
+}
+
+body main {
+    background-color: antiquewhite;
+    border-radius: 2.0rem;
+
+    width: 80vw;
+    margin: 2.0rem auto;
+
+    padding: 2.4rem;
+
+    font-family: 'Roboto-Mono', sans-serif;
+}
+
+main .inputs {
+    margin: 0 auto;
+    padding: 2.0rem;
+}
+
+h2 {
+    text-align: center;
+    padding-bottom: 1.0rem;
+
+    font-size: 2.4rem;
+    line-height: 3.6rem;
+}
+
+.inputs .input-wrapper {
+    padding: 0.5rem;
+    
+    border: 2px solid antiquewhite;
+    border-radius: 1.0rem;
+
+    max-width: 300px;
+    margin: 0 auto;
+
+    display: grid;
+    grid-template-columns: 2fr auto 1fr;
+    grid-template-areas: "left-label input right-label";
+
+    transition: all 200ms;
+}
+
+.inputs .input-wrapper:hover {
+    background-color: whitesmoke;
+    border: 2px solid whitesmoke;
+
+    font-weight: bold;
+}
+
+.input-wrapper label {
+    font-size: 1.2rem;
+    line-height: 1.8rem;
+}
+
+.input-wrapper .left {
+    grid-area: left-label;
+    text-align: end;
+    margin-right: 1.0rem;
+
+    align-self: center;
+}
+
+.input-wrapper input {
+    grid-area: input;
+    width: 4.5rem;
+
+    font-size: 1.4rem;
+    line-height: 2.1rem;
+
+    padding-left: 0.1rem;
+}
+
+.input-wrapper .right {
+    grid-area: right-label;
+    text-align: start;
+    margin-left: 1.0rem;
+
+    align-self: center;
+}
+
+p {
+    text-align: center;
+
+    font-size: 1.4rem;
+    line-height: 2.1rem;
+}
+
+.output {
+    background-color: whitesmoke;
+    border-radius: 2.0rem;
+
+    padding: 1.0rem;
+}
+
+.output strong {
+
+    font-size: 2.0rem;
+    line-height: 3.0rem;
+}

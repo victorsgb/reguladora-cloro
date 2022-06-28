@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reguladora-Cloro</title>
+   
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;500&display=swap" rel="stylesheet">   
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main>
+        <div class="inputs">
+            <h2>Dados de entrada</h2>
+            <div class="input-wrapper">
+                <label for="volume-produto" class="left">Quantidade de produto</label>
+                <input type="number" id="volume-produto" placeholder="Coloque a quantidade aqui"
+                min="0" value="50">
+                <label for="volume-produto" class="right">mL</label>
+            </div>
+    
+            <div class="input-wrapper">
+                <label for="volume-tambor" class="left">Volume do tambor</label>
+                <input type="number" id="volume-tambor" placeholder="Coloque o volume aqui" min="0" value="50">
+                <label for="volume-tambor" class="right">L</label>   
+            </div>
+    
+            <div class="input-wrapper">
+                <label for="vazao-permeado" class="left">Vazão do permeado</label>
+                <input type="number" id="vazao-permeado" placeholder="Coloque a vazão aqui" min="0" value="7">
+                <label for="vazao-permeado" class="right">L/min (LPM)</label>    
+            </div>
+        </div>
+
+        <div class="output">
+            <h2>Resultado</h2>
+            <p>Regule o fluxo para <strong id="output">...%</strong></p>
+        </div>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
