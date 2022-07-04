@@ -57,5 +57,5 @@ vazaoPermeadoInput.addEventListener('change', (e) => {
 // Calculemos a regulagem assim que a página abre, com os valores padrão
 output.textContent = calculaRegulagemFluxo(volumeProduto, volumeTambor, vazaoPermeado);
 
-// Coloque o primeiro input em foco, imediatamente
-volumeTamborInput.focus();
+// Coloque o segundo input em foco, imediatamente
+vazaoPermeadoInput.focus();
