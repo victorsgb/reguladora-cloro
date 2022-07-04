@@ -5,7 +5,7 @@ const produto = {
 };
 
 // Cálculos intermediários
-const volumeProduto = 50;
+const volumeProduto = 50; // Medida em mL
 
 // Características da bomba dosadora
 const bomba = {
@@ -13,9 +13,6 @@ const bomba = {
 }
 
 // Inputs do usuário
-// const volumeProdutoInput = document.querySelector('#volume-produto');
-// let volumeProduto = volumeProdutoInput.value;
-
 const volumeTamborInput = document.querySelector('#volume-tambor');
 let volumeTambor = volumeTamborInput.value;
 
@@ -41,16 +38,6 @@ function calculaRegulagemFluxo(volumeProduto, volumeTambor, vazaoPermeado) {
     return regulagemFluxo.toPrecision(3) + "%";
 }
 
-// Ouçamos os inputs do usuário e retornemos o valor da regulagem de fluxo, sempre que houver uma atualização nos valores de entrada:
-
-// volumeProdutoInput.addEventListener('change', (e) => {
-
-//     volumeProduto = e.target.value; // Quantidade de produto usada, medida em mililitros (mL)
-
-//     output.textContent = calculaRegulagemFluxo(volumeProduto, volumeTambor, vazaoPermeado);
-
-// })
-
 volumeTamborInput.addEventListener('change', (e) => {
 
     volumeTambor = e.target.value; // Capacidade do tambor de mistura, medida em litros (L)
@@ -67,5 +54,8 @@ vazaoPermeadoInput.addEventListener('change', (e) => {
 
 })
 
-// Calculemos a regulagem assim que o site abre, com os valores padrão
+// Calculemos a regulagem assim que a página abre, com os valores padrão
 output.textContent = calculaRegulagemFluxo(volumeProduto, volumeTambor, vazaoPermeado);
+
+// Coloque o primeiro input em foco, imediatamente
+volumeTamborInput.focus();
