@@ -5,42 +5,115 @@
 }
 
 :root {
-    font-size: 62.5%;
+    font-size: 16px;
+}
+
+body {
+    font-family: 'Roboto-Mono', sans-serif;
+    background-image: url(images/background.png);
+}
+
+body header {
+    background-color: cornsilk;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2.0rem;
+    padding: 1.0rem 2.0rem;
+
+    width: 100vw;
+}
+
+header h1 {
+    font-size: 1.0rem;
+    line-height: 1.5rem;
+    letter-spacing: 3px;
+
+    text-align: end;
+    text-transform: uppercase;
+}
+
+header img {
+    width: 100px;
 }
 
 body main {
-    background-color: antiquewhite;
+    background-color: cornsilk;
     border-radius: 2.0rem;
 
     width: 80vw;
     margin: 2.0rem auto;
+}
 
-    padding: 2.4rem;
+main .comments {
+    display: flex;
+    flex-direction: column;
+    gap: 1.0rem;
+}
 
-    font-family: 'Roboto-Mono', sans-serif;
+main .comments table {
+    width: 100%;
+    background: antiquewhite;
+    border: 2px solid cornsilk;
+    border-radius: 1.0rem;
+
+    font-size: 1.0rem;
+    line-height: 1.5rem;
+    font-weight: 400;
+}
+
+table .title {
+    text-align: center;
+}
+
+table th {
+    text-align: end;
+    transition: all 1000ms;
+    padding-right: 1.0rem;
+}
+
+table td {
+    text-align: start;
+    padding: 0 2.0rem;
+    transition: all 1000ms;
+    border-radius: 1.0rem;
+}
+
+table:hover td {
+    background-color: whitesmoke;
+}
+
+table td:hover {
+    background-image: url(images/background.png);
 }
 
 main .inputs {
     margin: 0 auto;
-    padding: 2.0rem;
+    padding: 1.0rem;
 }
 
 h2 {
     text-align: center;
     padding-bottom: 1.0rem;
 
-    font-size: 2.4rem;
-    line-height: 3.6rem;
+    font-size: 1.0rem;
+    line-height: 1.5rem;
+}
+
+.inputs {
+    display: flex;
+    flex-direction: column;
 }
 
 .inputs .input-wrapper {
     padding: 0.5rem;
     
+    background: antiquewhite;
     border: 2px solid antiquewhite;
     border-radius: 1.0rem;
 
     max-width: 300px;
-    margin: 0 auto;
+    margin: 0 auto 1.0rem;
 
     display: grid;
     grid-template-columns: 2fr auto 1fr;
@@ -50,18 +123,16 @@ h2 {
 }
 
 .inputs .input-wrapper:hover {
-    background-color: whitesmoke;
+    background-image: url(images/background.png);
     border: 2px solid whitesmoke;
-
-    font-weight: bold;
 }
 
 .input-wrapper label {
-    font-size: 1.2rem;
-    line-height: 1.8rem;
+    font-size: 1.0rem;
+    line-height: 1.5rem;
 }
 
-.input-wrapper .left {
+.input-wrapper #left {
     grid-area: left-label;
     text-align: end;
     margin-right: 1.0rem;
@@ -71,15 +142,20 @@ h2 {
 
 .input-wrapper input {
     grid-area: input;
-    width: 4.5rem;
+    width: 3.5rem;
 
-    font-size: 1.4rem;
-    line-height: 2.1rem;
+    font-size: 1.0rem;
+    line-height: 1.5rem;
 
     padding-left: 0.1rem;
 }
 
-.input-wrapper .right {
+.input-wrapper input:focus {
+    outline: 2px solid black;
+    border-radius: 2px;
+}
+
+.input-wrapper #right {
     grid-area: right-label;
     text-align: start;
     margin-left: 1.0rem;
@@ -90,19 +166,54 @@ h2 {
 p {
     text-align: center;
 
-    font-size: 1.4rem;
-    line-height: 2.1rem;
+    font-size: 1.0rem;
+    line-height: 1.5rem;
 }
 
 .output {
-    background-color: whitesmoke;
+    background-color: antiquewhite;
+    border: 2px solid antiquewhite;
     border-radius: 2.0rem;
 
     padding: 1.0rem;
 }
 
+.output:hover {
+    background-image: url(images/background.png);
+    border: 2px solid antiquewhite;
+}
+
 .output strong {
 
-    font-size: 2.0rem;
-    line-height: 3.0rem;
+    font-size: 1.5rem;
+    line-height: 2.3rem;
+}
+
+.output:hover {
+    border: 2px solid whitesmoke;
+}
+
+@media (min-width: 600px) {
+
+    .inputs {
+        display: grid;
+        grid-template-areas: "title title" "first second";
+    }
+
+    .inputs h2 {
+        grid-area: title;
+    }
+
+    .inputs .first {
+        grid-area: first;
+        justify-self: flex-end;
+        width: 100%;
+    }
+
+    .inputs .second {
+        grid-area: second;
+        justify-self: flex-start;
+        width: 100%;
+    }
+    
 }

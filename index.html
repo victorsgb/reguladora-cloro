@@ -12,26 +12,54 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <header>
+        <h1>Dosador de Cloro</h1>
+        <img src="images/logo.png" alt="Logotipo do Programa Água Doce">
+    </header>
     <main>
-        <div class="inputs">
+
+        <div class="comments">
+
+            <table>
+                <tr>
+                    <th colspan="2" class="title">Ácido dicloroisocianúrico</th>
+                </tr>
+                <tr>
+                    <th>Densidade</th>
+                    <td>0.74 g/mL</td>
+                </tr>
+                <tr>
+                    <th>Pureza</th>
+                    <td>60% de cloro ativo</td>
+                </tr>
+                <tr>
+                    <th>Quantidade</th>
+                    <td>50 mL</td>
+                </tr>
+                <tr>
+                    <th>Bomba</th>
+                    <td>Vazão máxima de 6 L/h</td>
+                </tr>
+            </table>
+            <table>
+                <tr>
+                    <th colspan="2" class="title">Bomba de vazão máxima de 6 L/h</th>
+                </tr>
+            </table>
+        </div>
+
+        <div class="inputs">                      
             <h2>Dados de entrada</h2>
-            <div class="input-wrapper">
-                <label for="volume-produto" class="left">Quantidade de produto</label>
-                <input type="number" id="volume-produto" placeholder="Coloque a quantidade aqui"
-                min="0" value="50">
-                <label for="volume-produto" class="right">mL</label>
-            </div>
-    
-            <div class="input-wrapper">
-                <label for="volume-tambor" class="left">Volume do tambor</label>
+            <div class="input-wrapper first">
+                <label for="volume-tambor" id="left" >Tambor</label>
                 <input type="number" id="volume-tambor" placeholder="Coloque o volume aqui" min="0" value="50">
-                <label for="volume-tambor" class="right">L</label>   
-            </div>
-    
-            <div class="input-wrapper">
-                <label for="vazao-permeado" class="left">Vazão do permeado</label>
+                <label for="volume-tambor" id="right">L</label>   
+            </div>   
+            
+            <div class="input-wrapper second">
+                <label for="vazao-permeado" id="left">Permeado</label>
                 <input type="number" id="vazao-permeado" placeholder="Coloque a vazão aqui" min="0" value="7">
-                <label for="vazao-permeado" class="right">L/min (LPM)</label>    
+                <label for="vazao-permeado" id="right">LPM</label>    
             </div>
         </div>
 

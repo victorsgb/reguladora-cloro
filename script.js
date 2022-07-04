@@ -4,14 +4,17 @@ const produto = {
     pureza: 0.6, // Percentual de cloro ativo no produto
 };
 
+// Cálculos intermediários
+const volumeProduto = 50;
+
 // Características da bomba dosadora
 const bomba = {
     vazaoMaxima: 0.1 // Medida em litros por minuto (L/min ou LPM)
 }
 
 // Inputs do usuário
-const volumeProdutoInput = document.querySelector('#volume-produto');
-let volumeProduto = volumeProdutoInput.value;
+// const volumeProdutoInput = document.querySelector('#volume-produto');
+// let volumeProduto = volumeProdutoInput.value;
 
 const volumeTamborInput = document.querySelector('#volume-tambor');
 let volumeTambor = volumeTamborInput.value;
@@ -24,8 +27,7 @@ const output = document.querySelector('#output')
 
 // Função que calcula a regulagem de fluxo
 function calculaRegulagemFluxo(volumeProduto, volumeTambor, vazaoPermeado) {
-
-    // Cálculos intermediários
+   
     const massaCloroAtivo = volumeProduto * produto.densidade * produto.pureza; // Medida em gramas de cloro ativo
 
     const concentracaoCloroAtivo = 1000 * massaCloroAtivo / volumeTambor; // Medida em mg/L
@@ -41,13 +43,13 @@ function calculaRegulagemFluxo(volumeProduto, volumeTambor, vazaoPermeado) {
 
 // Ouçamos os inputs do usuário e retornemos o valor da regulagem de fluxo, sempre que houver uma atualização nos valores de entrada:
 
-volumeProdutoInput.addEventListener('change', (e) => {
+// volumeProdutoInput.addEventListener('change', (e) => {
 
-    volumeProduto = e.target.value; // Quantidade de produto usada, medida em mililitros (mL)
+//     volumeProduto = e.target.value; // Quantidade de produto usada, medida em mililitros (mL)
 
-    output.textContent = calculaRegulagemFluxo(volumeProduto, volumeTambor, vazaoPermeado);
+//     output.textContent = calculaRegulagemFluxo(volumeProduto, volumeTambor, vazaoPermeado);
 
-})
+// })
 
 volumeTamborInput.addEventListener('change', (e) => {
 
