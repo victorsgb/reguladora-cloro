@@ -1,7 +1,7 @@
-// Características do produto ácido dicloroisocianúrico
+// Características do produto hipoclorito de cálcio
 const produto = {
-    densidade: 0.74, // Medida em gramas por mililitro (g/mL)
-    pureza: 0.6, // Percentual de cloro ativo no produto
+    densidade: 2.35, // Medida em gramas por mililitro (g/mL a 25°C)
+    pureza: 0.65, // Percentual de cloro ativo no produto
 };
 
 // Cálculos intermediários
